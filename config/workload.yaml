@@ -1,4 +1,4 @@
-apiVersion: carto.run/v1alpha1
+XapiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
   name: tap-72th-app
