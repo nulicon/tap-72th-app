@@ -1,0 +1,26 @@
+id: 97c2b42f-e4a1-41e0-b8b0-e60e38292882
+timestamp: 2023-06-30T06:08:26Z
+username: nulicon
+source: TAP-GUI
+accelerator:
+  name: tanzu-java-web-app
+  source:
+    image: harbor2.homelab.io/tap-install6/tap-packages@sha256:0310128e62ade8150fbfa9fd82e826d98d4311a17b97ba5cb2bdab1ffc25d7d9
+fragments:
+  - name: build-wrapper-maven
+    source:
+      image: harbor2.homelab.io/tap-install6/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: java-version
+    source:
+      image: harbor2.homelab.io/tap-install6/tap-packages@sha256:fa976ccf1609cb69e74a0162f0f49581fd0d393003e2fbe5d54d12eae62b4ff9
+  - name: tap-workload
+    source:
+      image: harbor2.homelab.io/tap-install6/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+options:
+  bsGitBranch: main
+  bsGitRepository: github.com?owner=nulicon&repo=tap-72th-app
+  includeBuildToolWrapper: true
+  javaVersion: 11
+  projectName: tap-72th-app
+  repositoryPrefix: harbor2.homelab.io/my-project7
+  updateBoot3: false
